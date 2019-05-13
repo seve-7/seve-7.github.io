@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>邹雨霞的作品集/简历</title>
+    <title>作品集/简历</title>
     <style>
         div {
             width: 1250px;
@@ -22,11 +22,30 @@
 
 <body style="background-color:#3e3e3e;margin:0;" leftmargin=0 topmargin=0 oncontextmenu='return false' ondragstart='return false' onselectstart='return false' onselect='document.selection.empty()' oncopy='document.selection.empty()' onbeforecopy='return false'
     onmouseup='document.selection.empty()'>
-    <div>
+    <div id="example1"></div>
+    <!-- <div>
         <img style="width:100% ;height:100%" src="./961540819660.jpg" alt="">
-    </div>
+    </div> -->
 </body>
+<script src="./PDFObject.js"></script>
 <SCRIPT LANGUAGE=javascript>
+    var options = {
+
+        height: "550px",
+
+        pdfOpenParams: {
+            view: 'FitV',
+            page: '0'
+        },
+
+        name: "mans",
+
+        fallbackLink: "<p>您的浏览器暂不支持此pdf，请下载最新的浏览器</p>"
+
+    };
+
+    PDFObject.embed('./my_project.pdf', "#example1", options);
+
     function click() {
         return
     }
